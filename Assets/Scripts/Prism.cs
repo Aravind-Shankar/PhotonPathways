@@ -1,4 +1,3 @@
-/*
 using UnityEngine;
 
 public class Prism : MonoBehaviour
@@ -53,7 +52,7 @@ public class Prism : MonoBehaviour
         renderer.material = material;
     }
 }
-*/
+/*
 
 using UnityEngine;
 
@@ -125,3 +124,4 @@ public class Prism : MonoBehaviour
         renderer.material = material;
 }
 }
+*/
