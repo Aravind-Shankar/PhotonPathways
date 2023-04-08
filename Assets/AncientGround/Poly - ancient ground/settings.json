@@ -1,0 +1,22 @@
+{
+  "prompt_text": "ancient ground",
+  "patch": {
+    "ext": "png",
+    "dtype": "uint8",
+    "width": 512,
+    "height": 512,
+    "url": "https://static.withpoly.com/v3-voronoi/textures/patches/d540bce5-8c01-47f6-a0a2-9f3c0509733c.png",
+    "patch_id": "aCXe8UaZmp"
+  },
+  "seamless_prompt_text": "ancient ground",
+  "seamless_patch_scale": 0.8,
+  "upscale_prompt_text": "ancient ground",
+  "upscale_resolution": 1024,
+  "is_seamless": true,
+  "pbr_mode": "general",
+  "pbr_generate_color": true,
+  "pbr_generate_normal": true,
+  "pbr_generate_height": true,
+  "pbr_generate_ao": true,
+  "pbr_generate_roughness": true
+}
