@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Ray : MonoBehaviour
 {
-    public Vector3 origin;
-    public Vector3 direction;
     public GameObject laser;
     List<GameObject> beams;
     public int THRESHOLD;
@@ -30,8 +28,8 @@ public class Ray : MonoBehaviour
         isCurrBeamRendered = true;
         currBeamIndex = -1;
         path_depth = 0;
-        origin_cache = origin;
-        direction_cache = direction;
+        origin_cache = transform.position;
+        direction_cache = transform.forward;
         end_cache = origin_cache;
         isPathEnd = false;
     }
