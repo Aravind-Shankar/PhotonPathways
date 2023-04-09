@@ -38,6 +38,7 @@ public class RayModel : MonoBehaviour
 
     [HideInInspector]
     public UnityAction fullLengthAction;
+    public UnityAction deathAction;
 
     private void Awake()
     {
@@ -81,6 +82,8 @@ public class RayModel : MonoBehaviour
         if (_currentTime >= _rayData.lifetimeSeconds)
         {
             Destroy(gameObject);
+            if(deathAction != null)
+                deathAction.Invoke();
             return;
         }
 
