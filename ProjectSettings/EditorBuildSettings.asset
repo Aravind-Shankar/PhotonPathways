@@ -12,8 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Sridevi.unity
     guid: 3448873a108594dcba4bc9195daa3bdf
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2b560a03694119248ba2b396b5f59d98
+  - enabled: 1
     path: Assets/Scenes/Aravind2.unity
     guid: a33eb7c4faf58814f94ae5a84f18cca0
+  - enabled: 1
+    path: Assets/Scenes/InfoPage_Level1.unity
+    guid: d1c132e08e5944097b2c2ea8c176896c
+  - enabled: 1
+    path: Assets/Scenes/InfoPage_Popup.unity
+    guid: 01b21b3e42f234898b7fef13db491cbe
+  - enabled: 1
+    path: Assets/Scenes/PreLevel1.unity
+    guid: ca09eeed76429469397d8d2e60fecca9
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8fccb80e6c9a84389a75f2c1ed4d786d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d3134b6f939114be9b8d6dbeff42d453, type: 2}

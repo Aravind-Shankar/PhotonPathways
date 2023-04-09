@@ -8,7 +8,8 @@ public class ColliderCount2 : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        myBool = true;
+        if (collision.gameObject.tag == "Player")
+            myBool = true;
     }
 
     public bool GetBool()
