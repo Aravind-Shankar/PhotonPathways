@@ -63,14 +63,61 @@ public class Ray : MonoBehaviour
 
         if (Physics.Raycast(origin_, direction_, out hit, Mathf.Infinity))
         {
-            end_cache = hit.point;
-            direction_cache = Vector3.Reflect(direction_, hit.normal).normalized;
+            end_cache = hit.point + hit.normal.normalized * -0.05f;
+
+            float mat_refractive_index = 0.7f;
+            if (mat_refractive_index > 0f)
+            {
+                direction_cache = refractRay(mat_refractive_index, direction_.normalized, hit.normal.normalized);
+            }
+            else
+            {
+                direction_cache = Vector3.Reflect(direction_, hit.normal).normalized;
+            }
         }
         else
         {
             end_cache = origin_ + direction_ * 100f;
             isPathEnd = true;
         }
+    }
+
+    Vector3 refractRay(float refractive_index, Vector3 direction, Vector3 normal)
+    {
+        Vector3 I = direction;
+        Vector3 N = normal;
+
+        float cos_theta_i = Mathf.Clamp(-1, 1, Vector3.Dot(I, N));
+        float n1 = 1;
+        float n2 = refractive_index;
+
+        if (cos_theta_i < 0)
+        {
+            cos_theta_i = -cos_theta_i;
+        }
+        else
+        {
+            float temp = n1;
+            n1 = n2;
+            n2 = temp;
+            N = -N;
+        }
+
+        float n = n1 / n2;
+        float k = 1 - n * n * (1 - cos_theta_i * cos_theta_i);
+
+        if (k < 0)
+        {
+             return Vector3.Reflect(I, -N).normalized;
+        }
+
+        return n * I + (n * cos_theta_i - Mathf.Sqrt(k)) * N;
+
+        /*Vector3 e = hit.point + N * 100f;
+        Vector3 e1 = hit.point + direction_cache * 100f;
+
+        Debug.DrawLine(hit.point, e, Color.green, 100f);
+        Debug.DrawLine(hit.point, e1, Color.blue, 100f);*/
     }
 
     void generateBeam(Vector3 origin, Vector3 end)
@@ -91,8 +138,7 @@ public class Ray : MonoBehaviour
 
         Vector3 ray_direction = end - origin;
         float destinationScale = ray_direction.magnitude;
-        
-        float scale = Mathf.Lerp(0f, destinationScale, currentTime* speedFactor / destinationScale);
+        float scale = Mathf.Lerp(0f, destinationScale, currentTime*speedFactor / destinationScale);
 
         if (scale >= destinationScale)
         {
