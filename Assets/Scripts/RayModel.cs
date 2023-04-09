@@ -30,6 +30,7 @@ public class RayModel : MonoBehaviour
 
     public MeshRenderer rayEmissiveRenderer;
 
+    public float MediumRefractiveIndex { get; set; }
     public bool CanRender  { get;  set; }
 
     private float _currentTime;
@@ -45,11 +46,12 @@ public class RayModel : MonoBehaviour
         _atFullLength = false;
     }
 
-    public void Initialize(Data data, Vector3 origin, Vector3 end)
+    public void Initialize(Data data, Vector3 origin, Vector3 end, float mediumRefractiveIndex)
     {
         _rayData = data;
         _rayOrigin = origin;
         _rayEnd = end;
+        MediumRefractiveIndex = mediumRefractiveIndex;
 
         _rayDirection = end - origin;
         _rayLength = _rayDirection.magnitude;
@@ -77,7 +79,10 @@ public class RayModel : MonoBehaviour
 
         _currentTime += Time.deltaTime;
         if (_currentTime >= _rayData.lifetimeSeconds)
+        {
             Destroy(gameObject);
+            return;
+        }
 
         if (_atFullLength)
             return;
@@ -88,7 +93,8 @@ public class RayModel : MonoBehaviour
         if (scale >= _rayLength)
         {
             _atFullLength = true;
-            fullLengthAction.Invoke();
+            if (fullLengthAction != null)
+                fullLengthAction.Invoke();
         }
     }
 }

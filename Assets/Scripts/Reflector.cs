@@ -12,13 +12,13 @@ public class Reflector : RayReceiver
         _rayGenerator = GetComponent<RayGenerator>();
     }
 
-    public override void ReceiveRay(RayModel incidentRay, RaycastHit hit, RayGenerator rayGenerator)
+    public override void ReceiveRay(RayModel incidentRay, RaycastHit hit, RayGenerator rayGenerator, bool receiveFromInside = false)
     {
         base.ReceiveRay(incidentRay, hit, rayGenerator);
         _rayGenerator.CopyFrom(rayGenerator);
 
         Vector3 reflectedDir = Vector3.Reflect(incidentRay.Direction, hit.normal).normalized;
-        var reflectedRay = _rayGenerator.GenerateRay(hit.point, reflectedDir);
+        var reflectedRay = _rayGenerator.GenerateRay(hit.point, reflectedDir, incidentRay.MediumRefractiveIndex);
         incidentRay.fullLengthAction += () => { reflectedRay.CanRender = true; };
     }
 }

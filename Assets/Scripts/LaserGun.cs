@@ -35,7 +35,6 @@ public class LaserGun : RayGenerator
 
     public void Fire()
     {
-        Debug.Log("ENTERED FIRE");
         if (Time.timeSinceLevelLoad - _lastFireTime < cooldownSeconds)
         {
             Debug.Log($"Cooling down; can't fire.");
@@ -43,8 +42,10 @@ public class LaserGun : RayGenerator
         }
 
         _lastFireTime = Time.timeSinceLevelLoad;
+
         audioData.Play(0);
-        var ray = GenerateRay(firingPointTransform.position, firingPointTransform.forward);
+
+        var ray = GenerateRay(firingPointTransform.position, firingPointTransform.forward, 1.0f);
         ray.CanRender = true;
     }
 }

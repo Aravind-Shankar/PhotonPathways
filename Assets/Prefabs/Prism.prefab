@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2287613606697016924}
   - component: {fileID: 3228827159390431856}
+  - component: {fileID: 8056991494064687462}
+  - component: {fileID: 672085015599535438}
   m_Layer: 0
   m_Name: Prism
   m_TagString: Untagged
@@ -45,6 +47,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b6a1f90da9fef4dbc01e027df82e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8056991494064687462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287613606697016927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79da3a87389b3a04390a7bc1d6547a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayModelPrefab: {fileID: 0}
+  rayData:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sizeFactor: 0
+    speedFactor: 0
+    lifetimeSeconds: 0
+--- !u!64 &672085015599535438
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287613606697016927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: f31a5c94773606743adef3da842d6270, type: 3}
 --- !u!1001 &2966626187613276242
 PrefabInstance:
   m_ObjectHideFlags: 0
