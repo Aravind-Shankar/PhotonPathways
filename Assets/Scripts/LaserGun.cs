@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class LaserGun : RayGenerator
 {
@@ -9,17 +11,19 @@ public class LaserGun : RayGenerator
 
     public bool DEBUG_FireTrigger = false;
 
+    public InputAction triggerAction;
     private float _lastFireTime;
-    
-    void Start()
+
+    void OnEnable()
     {
+        triggerAction.Enable();
         _lastFireTime = Time.timeSinceLevelLoad;
         DEBUG_FireTrigger = false;
     }
 
     private void Update()
     {
-        if (DEBUG_FireTrigger)
+        if (DEBUG_FireTrigger || triggerAction.triggered)
         {
             DEBUG_FireTrigger = false;
             Fire();
@@ -29,6 +33,7 @@ public class LaserGun : RayGenerator
 
     public void Fire()
     {
+        Debug.Log("ENTERED FIRE");
         if (Time.timeSinceLevelLoad - _lastFireTime < cooldownSeconds)
         {
             Debug.Log($"Cooling down; can't fire.");
