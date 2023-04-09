@@ -15,6 +15,10 @@ public class Refractor : RayReceiver
 
     public override void ReceiveRay(RayModel incidentRay, RaycastHit hit, RayGenerator rayGenerator)
     {
+        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        sphere.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        sphere.transform.position = hit.point;
+
         base.ReceiveRay(incidentRay, hit, rayGenerator);
         _rayGenerator.CopyFrom(rayGenerator);
 

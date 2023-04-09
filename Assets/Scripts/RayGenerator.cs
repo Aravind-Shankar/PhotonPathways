@@ -6,6 +6,7 @@ public class RayGenerator : MonoBehaviour
 {
     public RayModel rayModelPrefab;
     public RayModel.Data rayData;
+    public bool isCounted;
 
     const float MAX_RAY_DISTANCE = 100f;
 
@@ -18,7 +19,7 @@ public class RayGenerator : MonoBehaviour
     public RayModel GenerateRay(Vector3 origin, Vector3 direction)
     {
         RayModel newRay = Instantiate(rayModelPrefab);
-
+        isCounted = false;
         if (Physics.Raycast(origin, direction, out var hit, MAX_RAY_DISTANCE))
         {
             newRay.Initialize(rayData, origin, hit.point);
