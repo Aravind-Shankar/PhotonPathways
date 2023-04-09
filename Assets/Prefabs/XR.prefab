@@ -1436,7 +1436,7 @@ MonoBehaviour:
   m_TrackingStateInput:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State Input
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: ddc8e0dc-51a5-4356-a1d3-f2f80a4208a5
