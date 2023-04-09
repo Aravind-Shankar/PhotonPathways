@@ -139,6 +139,23 @@ MonoBehaviour:
   firingPointTransform: {fileID: 5998991141664243777}
   cooldownSeconds: 0
   DEBUG_FireTrigger: 0
+  triggerAction:
+    m_Name: Trigger
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7f73942c-1bee-4549-b2e3-280ca93d3a30
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 305db3f2-9e75-45d6-a931-9422c1583fac
+      m_Path: <XRController>{RightHand}/gripPressed
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Trigger
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &5998991141664243782
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,8 +203,6 @@ MonoBehaviour:
   laser: {fileID: 8733216972304924370, guid: b20edeb62a997074296588d85d116de1, type: 3}
   THRESHOLD: 10
   speedFactor: 5
-  sizeFactor: 1
-  beamColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &6882023019331090794
 GameObject:
   m_ObjectHideFlags: 0
