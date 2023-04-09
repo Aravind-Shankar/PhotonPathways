@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(RayGenerator))]
 public class Disperser : RayReceiver
 {
     private RayGenerator _rayGenerator;
@@ -23,9 +24,9 @@ public class Disperser : RayReceiver
 
     }
 
-    public override void ReceiveRay(RayModel incidentRay, RaycastHit hit, RayGenerator rayGenerator)
+    public override void ReceiveRay(RayModel incidentRay, RaycastHit hit, RayGenerator rayGenerator, bool receiveFromInside = false)
     {
-        base.ReceiveRay(incidentRay, hit, rayGenerator);
+        base.ReceiveRay(incidentRay, hit, rayGenerator, receiveFromInside);
         _rayGenerator.CopyFrom(rayGenerator);
 
         float refractive_index = 1.7f;
@@ -34,7 +35,7 @@ public class Disperser : RayReceiver
         {
             Vector3 refractedDir = refractRay(incidentRay.Direction.normalized, hit.normal.normalized, refractive_index);
             _rayGenerator.rayData.color = VIBGYOR[i];
-            var refractedRay = _rayGenerator.GenerateRay(hit.point, refractedDir);
+            var refractedRay = _rayGenerator.GenerateRay(hit.point, refractedDir, refractive_index);
 
             incidentRay.fullLengthAction += () => { refractedRay.CanRender = true; };
             refractive_index -= 0.05f;
