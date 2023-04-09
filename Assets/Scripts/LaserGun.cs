@@ -13,12 +13,14 @@ public class LaserGun : RayGenerator
 
     public InputAction triggerAction;
     private float _lastFireTime;
+    private AudioSource audioData;
 
     void OnEnable()
     {
         triggerAction.Enable();
         _lastFireTime = Time.timeSinceLevelLoad;
         DEBUG_FireTrigger = false;
+        audioData = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -41,7 +43,7 @@ public class LaserGun : RayGenerator
         }
 
         _lastFireTime = Time.timeSinceLevelLoad;
-
+        audioData.Play(0);
         var ray = GenerateRay(firingPointTransform.position, firingPointTransform.forward);
         ray.CanRender = true;
     }
