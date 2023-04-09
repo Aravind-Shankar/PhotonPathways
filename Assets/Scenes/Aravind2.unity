@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.015470549, g: 0.009237031, b: 0.014445071, a: 1}
+  m_IndirectSpecularColor: {r: 0.015430791, g: 0.009246423, b: 0.014405392, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,6 +156,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 91.138, z: 0}
+--- !u!1 &119023925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7531034975230206280, guid: 17a0965cc3abf1e40924b4e068d79db6, type: 3}
+  m_PrefabInstance: {fileID: 1892985049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &119023932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119023925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b6a1f90da9fef4dbc01e027df82e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refractive_indices:
+  - 1.524
+  - 1.522
+  - 1.52
+  - 1.518
+  - 1.516
+  - 1.514
+  - 1.512
 --- !u!1001 &368415580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -995,7 +1020,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mirror (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6968669953244191543, guid: 17a0965cc3abf1e40924b4e068d79db6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 17a0965cc3abf1e40924b4e068d79db6, type: 3}
 --- !u!4 &1892985050 stripped
 Transform:
