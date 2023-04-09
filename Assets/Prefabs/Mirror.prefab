@@ -110,5 +110,35 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6488764, y: 0.4551416, z: 1.4080595}
-  m_Center: {x: -0.0007683933, y: 0, z: 0.6501221}
+  m_Size: {x: 0.4, y: 0.05, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0.8}
+--- !u!114 &6572184170300647376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531034975230206280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79da3a87389b3a04390a7bc1d6547a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayModelPrefab: {fileID: 8072143352120359850, guid: b20edeb62a997074296588d85d116de1, type: 3}
+  rayData:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    sizeFactor: 0
+    speedFactor: 0
+    lifetimeSeconds: 0
+--- !u!114 &6968669953244191543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531034975230206280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7d06df9859b2645ad1c0d44e38a59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

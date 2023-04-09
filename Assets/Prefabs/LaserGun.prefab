@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5998991141511240093}
+  - component: {fileID: 8283901631968390254}
   m_Layer: 0
   m_Name: LaserGun
   m_TagString: Untagged
@@ -117,6 +118,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8283901631968390254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5998991141511240082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2b2ad782c122a4f9029f03af7f8862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayModelPrefab: {fileID: 8072143352120359850, guid: b20edeb62a997074296588d85d116de1, type: 3}
+  rayData:
+    color: {r: 0, g: 4, b: 3.4039216, a: 0}
+    sizeFactor: 0.1
+    speedFactor: 10
+    lifetimeSeconds: 2
+  firingPointTransform: {fileID: 5998991141664243777}
+  cooldownSeconds: 0
+  DEBUG_FireTrigger: 0
 --- !u!1 &5998991141664243782
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +178,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5998991141664243782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb7fc64e48ee7664491a91622b267a0e, type: 3}
   m_Name: 
@@ -164,6 +186,8 @@ MonoBehaviour:
   laser: {fileID: 8733216972304924370, guid: b20edeb62a997074296588d85d116de1, type: 3}
   THRESHOLD: 10
   speedFactor: 5
+  sizeFactor: 1
+  beamColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &6882023019331090794
 GameObject:
   m_ObjectHideFlags: 0
