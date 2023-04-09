@@ -963,8 +963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7e31bb1571f405ab773935f70a55fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: InfoPage_Level1
-  timeToWait: 5
+  nextSceneName: Aravind2
+  timeToWait: 10
 --- !u!4 &375374718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8758420297249064420, guid: 5fc7bfdbc0458486c839b4855fdbed7b, type: 3}
@@ -2750,6 +2750,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8672605235374421519, guid: 18eb93125c4dc48309f35bea3f9afe65, type: 2}
     - target: {fileID: 897760812, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897760812, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_TagString
       value: uiCustom
       objectReference: {fileID: 0}
@@ -2786,25 +2790,46 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1409369871, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409369871, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_TagString
       value: uiCustom
       objectReference: {fileID: 0}
+    - target: {fileID: 1434390841, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
+      propertyPath: m_Name
+      value: BackStory
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
+      propertyPath: m_text
+      value: "Reflection is the concept of light bouncing off a surface and returning
+        to the viewer's eyes.In the game, you will need to use the concept of reflection
+        to manipulate reflective surfaces, and redirect beam of light to a crystal
+        that takes you more closer to the real world. Reflection is a crucial tool
+        in your arsenal, and mastering it will be key to escaping Lumina and returning
+        to the real world\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
+      propertyPath: m_margin.w
+      value: -200.43591
       objectReference: {fileID: 0}
     - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 18eb93125c4dc48309f35bea3f9afe65, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_fontSizeBase
-      value: 50
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -8672605235374421519, guid: 18eb93125c4dc48309f35bea3f9afe65, type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 1565868896, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_text
       value: Quit Game
