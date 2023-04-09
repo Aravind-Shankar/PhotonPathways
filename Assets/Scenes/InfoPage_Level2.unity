@@ -963,7 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7e31bb1571f405ab773935f70a55fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Purva_Test_3
+  nextSceneName: InfoPage_CriticalAngle
   timeToWait: 20
 --- !u!4 &375374718 stripped
 Transform:
@@ -2803,12 +2803,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_text
-      value: "Reflection is the concept of light bouncing off a surface and returning
-        to the viewer's eyes.In the game, you will need to use the concept of reflection
-        to manipulate reflective surfaces, and redirect beam of light to a crystal
-        that takes you more closer to the real world. Reflection is a crucial tool
-        in your arsenal, and mastering it will be key to escaping Lumina and returning
-        to the real world\u2026"
+      value: Light bends when it moves from one medium to another, and the degree
+        of bending depends on the difference in refractive indices between the two
+        media. Refractive index measures how much the speed of light changes when
+        it moves through a medium. The angle of refraction can be calculated using
+        Snell's law, which involves the refractive indices of the two media and the
+        angles of incidence and refraction.
       objectReference: {fileID: 0}
     - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_fontSize

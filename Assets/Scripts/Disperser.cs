@@ -29,7 +29,7 @@ public class Disperser : RayReceiver
         base.ReceiveRay(incidentRay, hit, rayGenerator, receiveFromInside);
         _rayGenerator.CopyFrom(rayGenerator);
 
-        float refractive_index = 1.7f;
+        float refractive_index = 2f;
 
         for (int i = 0; i < 7; i++)
         {
@@ -38,7 +38,7 @@ public class Disperser : RayReceiver
             var refractedRay = _rayGenerator.GenerateRay(hit.point, refractedDir, refractive_index);
 
             incidentRay.fullLengthAction += () => { refractedRay.CanRender = true; };
-            refractive_index -= 0.05f;
+            refractive_index -= 0.1f;
         }
     }
 

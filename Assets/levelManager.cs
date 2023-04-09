@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class levelManager : MonoBehaviour
 {
     public GameObject[] reflectors;
+    
     public GameObject crystal;
+    public string nextSceneName;
+    
     private AudioSource audioData;
+    
 
     void Start()
     {
@@ -30,6 +35,11 @@ public class levelManager : MonoBehaviour
             Debug.Log(counter);
             crystal.GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
             audioData.Play(0);
+            LoadNextScene();
         }
+    }
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(nextSceneName);
     }
 }

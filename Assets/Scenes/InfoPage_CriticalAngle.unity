@@ -963,7 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7e31bb1571f405ab773935f70a55fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Purva_Test_3
+  nextSceneName: InfoPage_Refraction
   timeToWait: 20
 --- !u!4 &375374718 stripped
 Transform:
@@ -2803,12 +2803,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_text
-      value: "Reflection is the concept of light bouncing off a surface and returning
-        to the viewer's eyes.In the game, you will need to use the concept of reflection
-        to manipulate reflective surfaces, and redirect beam of light to a crystal
-        that takes you more closer to the real world. Reflection is a crucial tool
-        in your arsenal, and mastering it will be key to escaping Lumina and returning
-        to the real world\u2026"
+      value: The critical angle formula gives the angle of incidence at which the
+        refracted ray becomes perpendicular to the surface of the second medium.
+        It is expressed as sin(critical angle) = n2/n1, where n1 and n2 are the refractive
+        indices of the media. These formulas are important in fields such as optics,
+        physics, and engineering, as they allow us to anticipate and regulate the
+        behavior of light as it moves through different materials.
       objectReference: {fileID: 0}
     - target: {fileID: 1434390843, guid: 51f36f230d2371f4cb403e68c14e87d0, type: 3}
       propertyPath: m_fontSize

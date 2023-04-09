@@ -964,7 +964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: PreLevel1
-  timeToWait: 10
+  timeToWait: 20
 --- !u!4 &375374718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8758420297249064420, guid: 5fc7bfdbc0458486c839b4855fdbed7b, type: 3}
@@ -1274,7 +1274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8758420298496417799, guid: 5fc7bfdbc0458486c839b4855fdbed7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 285.57013
+      value: 284.545
       objectReference: {fileID: 0}
     - target: {fileID: 8758420298496417799, guid: 5fc7bfdbc0458486c839b4855fdbed7b, type: 3}
       propertyPath: m_LocalRotation.w

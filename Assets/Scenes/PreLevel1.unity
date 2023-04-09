@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: InfoPage_Popup
-  timeToWait: 5
+  timeToWait: 10
 --- !u!1001 &2122031144
 PrefabInstance:
   m_ObjectHideFlags: 0
