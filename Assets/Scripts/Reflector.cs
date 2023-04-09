@@ -6,7 +6,7 @@ using UnityEngine;
 public class Reflector : RayReceiver
 {
     private RayGenerator _rayGenerator;
-
+    
     private void Awake()
     {
         _rayGenerator = GetComponent<RayGenerator>();
